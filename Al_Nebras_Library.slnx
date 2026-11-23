@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Al_Nebras_LibraryPresentationLayer/Al_Nebras_LibraryPresentationLayer.csproj" Id="e0c1ea6e-2cd3-4862-ba7a-9154f8fce2e8" />
+  <Project Path="Library_BusinessLayer/Library_BusinessLayer.csproj" Id="d3995b6f-548b-47d4-9b29-0ce9ab20e4fc" />
+  <Project Path="Library_DataAccessLayer/Library_DataAccessLayer.csproj" Id="0c55b462-00cd-43d2-aa25-f5b25fad6c62" />
+</Solution>
