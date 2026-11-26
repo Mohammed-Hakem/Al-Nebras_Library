@@ -148,7 +148,7 @@ namespace Library_DataAccessLayer
             return rowsAffected != 0;
         }
 
-        public static bool CheckAdmin(int UserID)
+        public static bool CheckAdmine(int UserID)
         {
             bool isFound = false;
 
@@ -185,7 +185,41 @@ namespace Library_DataAccessLayer
             return isFound;
         }
 
+        public static bool IsActiveAdmine(int UserID)
+        {
+            bool IsActive = false;
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+            string query = @"SELECT IsActive FROM [Library].[dbo].[Administrators]
+                                where UserID = @UserID";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@UserID", UserID);
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    // The record was found
+                    IsActive = (bool)reader["IsActive"];
+                }
+                else
+                {
+                    // The record was not found
+                }
+                reader.Close();
 
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return IsActive;
+        }
 
 
 

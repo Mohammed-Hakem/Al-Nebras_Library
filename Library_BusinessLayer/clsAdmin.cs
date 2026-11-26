@@ -62,11 +62,14 @@ namespace Library_BusinessLayer
 
         public static bool CheckAdmin(int UserID)
         {
-            return clsAdmineData.CheckAdmin(UserID);
+            return clsAdmineData.CheckAdmine(UserID);
 
         }
 
-
+        public static bool IsActiveAdmine(int UserID)
+        {
+            return clsAdmineData.IsActiveAdmine(UserID);
+        }
 
     }//Class End
 }

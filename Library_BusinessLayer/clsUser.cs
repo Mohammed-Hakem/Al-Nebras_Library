@@ -22,8 +22,9 @@ namespace Library_BusinessLayer
         public string LibraryCardNumber { get; set; }
         public string Password { get; set; }
         public string Username { get; set; }
+        public bool IsAdmine { get ; set; }
 
-        public bool IsAdmin { get ; set; }
+        public bool IsActiveAdmine { get; set; }
 
         // Constructor for adding a new user
         public clsUser()
@@ -34,7 +35,8 @@ namespace Library_BusinessLayer
             LibraryCardNumber = "";
             Password = "";
             Username = "";
-            IsAdmin = false;
+            IsAdmine = false;
+            IsActiveAdmine = false;
 
             enMode = enModes.AddNew;
         }
@@ -49,7 +51,8 @@ namespace Library_BusinessLayer
             this.LibraryCardNumber = LibraryCardNumber;
             this.Password = Password;
             this.Username = Username;
-            this.IsAdmin = IsAdmin;
+            this.IsAdmine = IsAdmin;
+            this.IsActiveAdmine = clsAdmin.IsActiveAdmine(this.UserID);
 
             enMode = enModes.Update;
 

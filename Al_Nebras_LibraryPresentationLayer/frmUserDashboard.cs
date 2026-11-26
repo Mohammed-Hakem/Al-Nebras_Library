@@ -87,44 +87,37 @@ namespace Al_Nebras_LibraryPresentationLayer
             if (Level == 0)
             {
                 AdministrativeLevel = 0;
+                IsUser = false;
             }
             else if (Level == 1)
             {
                 AdministrativeLevel = 1;
+                IsUser = true;
             }
             else if(Level == 2)
             {
                 AdministrativeLevel = 2;
+                IsUser = true;
+                IsAdministrator = true;
             }
             IsAdministrator = (AdministrativeLevel == 2) ? true : false;
             IsUser = (AdministrativeLevel == 1 || AdministrativeLevel == 2) ? true : false;
-
+            btnAccountSettings.Enabled = IsUser;
+            btnAccountSettings.Visible = IsUser;
+            btnLogin.Enabled = !IsUser;
+            btnLogin.Visible = !IsUser;
 
             btnAdminDashboard.Enabled = IsAdministrator;
             btnAdminDashboard.Visible = IsAdministrator;
-            btnLogOut.Enabled = IsUser;
-            btnLogOut.Visible = IsUser;
-            btnLogIn.Enabled = !IsUser;
-            btnLogIn.Visible = !IsUser;
+            
         }
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            frmLogin LoginForm = new frmLogin();
+            frmAccountSettings LoginForm = new frmAccountSettings();
             LoginForm.DataBack += CheckAdministrativeLevel;
             LoginForm.ShowDialog();
             UserDashboard_Load(null, null);
-        }
-
-        private void btnLogOut_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Are you sure you want to log out?", "Warring", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                AdministrativeLevel = 0;
-                CheckAdministrativeLevel(AdministrativeLevel);
-                UserDashboard_Load(null, null);
-            }
-
         }
 
         private void btnAdminDashboard_Click(object sender, EventArgs e)
@@ -200,6 +193,14 @@ namespace Al_Nebras_LibraryPresentationLayer
                     break;
             }
 
+        }
+
+        private void btnAccountSettings_Click(object sender, EventArgs e)
+        {
+            frmAccountSettings frm = new frmAccountSettings(frmAccountSettings.enMode.ShowAccountInfo);
+            frm.DataBack += CheckAdministrativeLevel;
+            frm.ShowDialog();
+            UserDashboard_Load(null, null);
         }
     }//Class End
 }

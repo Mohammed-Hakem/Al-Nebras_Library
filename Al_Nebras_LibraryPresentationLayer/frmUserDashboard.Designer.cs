@@ -32,7 +32,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbTableType = new System.Windows.Forms.ComboBox();
-            this.btnLogIn = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.btnAdminDashboard = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.txtSearchBox = new System.Windows.Forms.TextBox();
@@ -41,8 +41,8 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvUserTable = new System.Windows.Forms.DataGridView();
-            this.btnLogOut = new System.Windows.Forms.Button();
             this.ctrlBookInfo = new Al_Nebras_LibraryPresentationLayer.Controls.BookInfo();
+            this.btnAccountSettings = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserTable)).BeginInit();
             this.SuspendLayout();
@@ -74,7 +74,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.cbTableType);
-            this.panel1.Controls.Add(this.btnLogIn);
+            this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.btnAdminDashboard);
             this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.txtSearchBox);
@@ -84,7 +84,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.dgvUserTable);
             this.panel1.Controls.Add(this.ctrlBookInfo);
-            this.panel1.Controls.Add(this.btnLogOut);
+            this.panel1.Controls.Add(this.btnAccountSettings);
             this.panel1.Location = new System.Drawing.Point(28, 11);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
@@ -104,21 +104,21 @@
             this.cbTableType.Text = "User Table Type:   ";
             this.cbTableType.SelectedIndexChanged += new System.EventHandler(this.cbTableType_SelectedIndexChanged);
             // 
-            // btnLogIn
+            // btnLogin
             // 
-            this.btnLogIn.BackColor = System.Drawing.Color.FloralWhite;
-            this.btnLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogIn.Image = global::Al_Nebras_LibraryPresentationLayer.Properties.Resources.Mahm0udwally_All_Flat_User_48;
-            this.btnLogIn.Location = new System.Drawing.Point(14, 10);
-            this.btnLogIn.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLogIn.Name = "btnLogIn";
-            this.btnLogIn.Size = new System.Drawing.Size(203, 83);
-            this.btnLogIn.TabIndex = 33;
-            this.btnLogIn.Text = "Log in";
-            this.btnLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLogIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLogIn.UseVisualStyleBackColor = false;
-            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
+            this.btnLogin.BackColor = System.Drawing.Color.FloralWhite;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Image = global::Al_Nebras_LibraryPresentationLayer.Properties.Resources.Mahm0udwally_All_Flat_User_48;
+            this.btnLogin.Location = new System.Drawing.Point(14, 13);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(212, 83);
+            this.btnLogin.TabIndex = 33;
+            this.btnLogin.Text = " Log in";
+            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
             // btnAdminDashboard
             // 
@@ -214,37 +214,24 @@
             // dgvUserTable
             // 
             this.dgvUserTable.AllowUserToAddRows = false;
+            this.dgvUserTable.AllowUserToDeleteRows = false;
             this.dgvUserTable.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvUserTable.ColumnHeadersHeight = 100;
             this.dgvUserTable.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvUserTable.Location = new System.Drawing.Point(14, 323);
             this.dgvUserTable.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvUserTable.MultiSelect = false;
             this.dgvUserTable.Name = "dgvUserTable";
             this.dgvUserTable.ReadOnly = true;
             this.dgvUserTable.RowHeadersWidth = 92;
             this.dgvUserTable.RowTemplate.Height = 37;
+            this.dgvUserTable.ShowEditingIcon = false;
+            this.dgvUserTable.ShowRowErrors = false;
             this.dgvUserTable.Size = new System.Drawing.Size(2492, 845);
             this.dgvUserTable.TabIndex = 24;
             this.dgvUserTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAllBooks_CellClick);
             this.dgvUserTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAllBooks_CellClick);
             this.dgvUserTable.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAllBooks_CellClick);
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.BackColor = System.Drawing.Color.LightCoral;
-            this.btnLogOut.Enabled = false;
-            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.Image = global::Al_Nebras_LibraryPresentationLayer.Properties.Resources.Aniket_Suvarna_Box_Regular_Bx_log_out_48;
-            this.btnLogOut.Location = new System.Drawing.Point(13, 10);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(203, 83);
-            this.btnLogOut.TabIndex = 34;
-            this.btnLogOut.Text = "Log out";
-            this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLogOut.UseVisualStyleBackColor = false;
-            this.btnLogOut.Visible = false;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // ctrlBookInfo
             // 
@@ -256,6 +243,24 @@
             this.ctrlBookInfo.Size = new System.Drawing.Size(2492, 551);
             this.ctrlBookInfo.TabIndex = 30;
             this.ctrlBookInfo.Visible = false;
+            // 
+            // btnAccountSettings
+            // 
+            this.btnAccountSettings.BackColor = System.Drawing.Color.FloralWhite;
+            this.btnAccountSettings.Enabled = false;
+            this.btnAccountSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccountSettings.Image = global::Al_Nebras_LibraryPresentationLayer.Properties.Resources.Mahm0udwally_All_Flat_User_48;
+            this.btnAccountSettings.Location = new System.Drawing.Point(14, 13);
+            this.btnAccountSettings.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAccountSettings.Name = "btnAccountSettings";
+            this.btnAccountSettings.Size = new System.Drawing.Size(415, 83);
+            this.btnAccountSettings.TabIndex = 36;
+            this.btnAccountSettings.Text = " Account Settings";
+            this.btnAccountSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAccountSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAccountSettings.UseVisualStyleBackColor = false;
+            this.btnAccountSettings.Visible = false;
+            this.btnAccountSettings.Click += new System.EventHandler(this.btnAccountSettings_Click);
             // 
             // frmUserDashboard
             // 
@@ -291,8 +296,8 @@
         private System.Windows.Forms.DataGridView dgvUserTable;
         private Controls.BookInfo ctrlBookInfo;
         private System.Windows.Forms.Button btnAdminDashboard;
-        private System.Windows.Forms.Button btnLogIn;
-        private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.ComboBox cbTableType;
+        private System.Windows.Forms.Button btnAccountSettings;
     }
 }

@@ -50,11 +50,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsGlobal.cs" />
-    <Compile Include="frmLogin.cs">
+    <Compile Include="frmAccountSettings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <Compile Include="frmAccountSettings.Designer.cs">
+      <DependentUpon>frmAccountSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAdminDashBoard.cs">
       <SubType>Form</SubType>
@@ -76,8 +76,14 @@
     <Compile Include="frmUserDashboard.Designer.cs">
       <DependentUpon>frmUserDashboard.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <Compile Include="Temp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Temp.Designer.cs">
+      <DependentUpon>Temp.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmAccountSettings.resx">
+      <DependentUpon>frmAccountSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\BookInfo.resx">
       <DependentUpon>BookInfo.cs</DependentUpon>
@@ -97,6 +103,9 @@
     </Compile>
     <EmbeddedResource Include="frmUserDashboard.resx">
       <DependentUpon>frmUserDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Temp.resx">
+      <DependentUpon>Temp.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -141,6 +150,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Aniket-Suvarna-Box-Regular-Bx-log-out.48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user256.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

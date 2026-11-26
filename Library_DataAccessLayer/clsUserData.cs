@@ -109,8 +109,12 @@ namespace Library_DataAccessLayer
             try
             {
                 connection.Open();
-                int count = (int)command.ExecuteScalar();
-                userID = count ;
+                object result = command.ExecuteScalar();
+
+                if (result != null && result != DBNull.Value)
+                {
+                    userID = Convert.ToInt32(result);
+                }
             }
             catch (Exception ex)
             {
